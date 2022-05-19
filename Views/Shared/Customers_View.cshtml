@@ -1,0 +1,33 @@
+﻿@using global::WebApplication2.Controllers
+@using global::WebApplication2.Models
+
+@{
+
+     Customer_Controller cc = new Customer_Controller();
+     List<Customer> customers = cc.GetCustomers();
+
+}
+
+<!DOCTYPE html>
+<head>
+    
+</head>
+<body>
+    
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <p>
+        @for (int i = 0; i < customers.Count; i++){
+
+          @customers[i].Nome;
+
+        }
+      
+    </p>
+
+</body>
+</html>
